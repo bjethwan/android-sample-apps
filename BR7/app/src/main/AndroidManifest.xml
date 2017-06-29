@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,22 +19,9 @@
 
         <receiver android:name=".FirstReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.AIRPLANE_MODE"/>
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
                 <action android:name="com.bjethwan.action.broadcastnow"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".SecondReceiver">
-            <intent-filter>
-                <action android:name="com.bjethwan.action.broadcastnow"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="MainActivity$ThirdReceiver">
-            <intent-filter>
-                <action android:name="com.bjethwan.action.broadcastnow"/>
-            </intent-filter>
-        </receiver>
     </application>
-
 </manifest>

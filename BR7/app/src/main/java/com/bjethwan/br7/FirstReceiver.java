@@ -12,13 +12,13 @@ public class FirstReceiver extends BroadcastReceiver {
     private static String msg = "This is from 1st Receiver";
 
     @Override
-    public void onReceive(Context context, Intent intent)
-    {
+    public void onReceive(Context context, Intent intent) {
+
         int x = intent.getIntExtra("x", 0);
         float y = intent.getFloatExtra("y", 0f);
 
         Log.i(TAG, msg + " x = " + x + " y = " + y);
         Toast.makeText(context, msg + " x = " + x + " y = " + y, Toast.LENGTH_SHORT).show();
-
     }
 }
+
